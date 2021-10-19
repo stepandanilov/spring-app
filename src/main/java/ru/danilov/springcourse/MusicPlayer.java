@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 
-@Component
 public class MusicPlayer {
 	private Music music1;
 	private Music music2;
@@ -25,7 +24,6 @@ public class MusicPlayer {
 	}
 	
 	
-	@Autowired
 	public MusicPlayer(@Qualifier("rockMusic")Music music1, @Qualifier("classicalMusic")Music music2)
 	{
 		this.music1 = music1;
